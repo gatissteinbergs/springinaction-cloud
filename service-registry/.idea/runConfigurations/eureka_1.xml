@@ -1,0 +1,17 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="eureka-1" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
+    <module name="service-registry" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.springia.serviceregistry.ServiceRegistryApplication" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <additionalParameters>
+      <param>
+        <option name="enabled" value="true" />
+        <option name="name" value="spring.profiles.active" />
+        <option name="value" value="eureka-1" />
+      </param>
+    </additionalParameters>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

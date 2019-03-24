@@ -1,0 +1,17 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="indredient-client-2" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="ingredient-client" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.springia.ingredientclient.IngredientClientApplication" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <additionalParameters>
+      <param>
+        <option name="enabled" value="true" />
+        <option name="name" value="spring.profiles.active" />
+        <option name="value" value="indredient-client-2" />
+      </param>
+    </additionalParameters>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

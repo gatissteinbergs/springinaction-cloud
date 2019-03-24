@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="eurekas" type="CompoundRunConfigurationType">
+    <toRun name="eureka-2" type="SpringBootApplicationConfigurationType" />
+    <toRun name="eureka-1" type="SpringBootApplicationConfigurationType" />
+    <method v="2" />
+  </configuration>
+</component>
