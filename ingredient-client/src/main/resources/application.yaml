@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: ingredient-client
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/, http://localhost:8762/eureka/
+---
+
+spring:
+  profiles: indredient-client-1
+  application:
+    name: ingredient-client-1
+
+server:
+  port: 0
+
+---
+spring:
+  profiles: indredient-client-2
+  application:
+    name: ingredient-client-2
+
+server:
+  port: 0
+
+---
+spring:
+  profiles: indredient-client-3
+  application:
+    name: ingredient-client-3
+
+server:
+  port: 0
