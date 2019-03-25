@@ -1,5 +1,6 @@
 package com.springia.ingredientservice;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -22,6 +23,7 @@ public class IngredientController {
     }
 
     @GetMapping
+    @HystrixCommand(fallbackMethod = "getDefaultIngredientDetails")
     public Iterable<Ingredient> allIngredients() {
         return repo.findAll();
     }
@@ -29,6 +31,16 @@ public class IngredientController {
     @GetMapping("/{id}")
     public Optional<Ingredient> byId(@PathVariable String id) {
         return repo.findById(id);
+    }
+
+    private Ingredient getDefaultIngredientDetails(String ingredientId) {
+        if (ingredientId.equals("FLTO")) {
+            return new Ingredient("FLTO", "Flour Tortilla", Ingredient.Type.WRAP);
+        } else if (ingredientId.equals("GRBF")) {
+            return new Ingredient("GRBF", "Ground Beef", Ingredient.Type.PROTEIN);
+        } else {
+            return new Ingredient("CHED", "Shredded Cheddar", Ingredient.Type.CHEESE);
+        }
     }
 
     @PutMapping("/{id}")

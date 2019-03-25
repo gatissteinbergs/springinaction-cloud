@@ -4,21 +4,10 @@ spring:
   cloud:
     config:
       uri: http://localhost:8888
----
 
-spring:
-  profiles: indredient-client-1
-  application:
-    name: ingredient-client
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
 
----
-spring:
-  profiles: indredient-client-2
-  application:
-    name: ingredient-client
-
----
-spring:
-  profiles: indredient-client-3
-  application:
-    name: ingredient-client
