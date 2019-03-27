@@ -1,0 +1,15 @@
+
+spring:
+  security:
+    user:
+      name: admin
+      password: admin
+  application:
+    name: boot-admin-server
+  cloud:
+    config:
+      uri: http://localhost:8888
+
+eureka:
+  client:
+    register-with-eureka: false

@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: taco-service
+  cloud:
+    config:
+      uri: http://localhost:8888
+
+
+### Configures the application's credentials as metadata in Eureka so that the
+### Spring Boot Admin will be able to authenticate against Actuator security.
+eureka:
+  instance:
+    metadata-map:
+      user.name: admin
+      user.password: password
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        exclude: threaddump, heapdump
+  endpoint:
+    health:
+      show-details: always
+  info:
+    git:
+      mode: full
+
+info:
+  contact:
+    email: support@tacocloud.com
+    phone: 822-625-6831
